@@ -3,7 +3,6 @@ package com.br.ayrton.todolist.service;
 import com.br.ayrton.todolist.model.Task;
 import com.br.ayrton.todolist.repositoy.TaskRepository;
 import lombok.AllArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
