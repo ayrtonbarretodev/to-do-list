@@ -43,7 +43,7 @@ public class TaskService {
                  taskToUpdate.setTitle(task.getTitle());
                  taskToUpdate.setDescription(taskToUpdate.getDescription());
                  taskToUpdate.setDeadLine(taskToUpdate.getDeadLine());
-                 Task updated = taskRepository.save(task);
+                 Task updated = taskRepository.save(taskToUpdate);
                  return ResponseEntity.ok().body(updated);
                 }).orElse(ResponseEntity.notFound().build());
     }
