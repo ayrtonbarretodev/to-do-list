@@ -22,9 +22,9 @@ public class TaskService {
         return taskRepository.findAll();
     }
 
-    public List<Task> listAllTasksCompleted(){
-        return taskRepository.findByStatusTaskConcluida();
-    }
+//    public List<Task> listAllTasksCompleted(){
+//        return taskRepository.findByStatusTaskConcluida();
+//    }
 
     public ResponseEntity<Task> findTaskById(Long id){
         return taskRepository.findById(id)

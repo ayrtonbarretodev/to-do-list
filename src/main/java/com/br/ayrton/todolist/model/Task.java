@@ -36,7 +36,7 @@ public class Task {
     @Column(name = "updated_at")
     private LocalDateTime updatedAt;
 
-    @Column(nullable = false)
-    @Enumerated(EnumType.STRING)
-    private StatusTask statusTask;
+//    @Column(nullable = false)
+//    @Enumerated(EnumType.STRING)
+//    private StatusTask status;
 }
