@@ -23,7 +23,7 @@ public class TaskService {
     }
 
     public List<Task> listAllTasksCompleted(){
-        return taskRepository.findByStatusTask_Concluida();
+        return taskRepository.findByStatusTaskConcluida();
     }
 
     public ResponseEntity<Task> findTaskById(Long id){
