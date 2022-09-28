@@ -44,6 +44,17 @@ public class TaskController {
         return ResponseEntity.status(HttpStatus.OK).body(taskService.listAllTasks());
     }
 
+    @Operation(summary = "List Task Completed",description = "Listando todas as tarefas completadas",responses = {
+            @ApiResponse(responseCode = "200", description = "Tarefas completas listadas com sucesso"),
+            @ApiResponse(responseCode = "500", description = "Houve um erro ao listar as tarefas completadas")
+    })
+
+    @GetMapping("/tasks/completed")
+    public ResponseEntity<List<Task>> getAllTasksCompleted(){
+        log.info("Listando todas as tarefas conclídas");
+        return ResponseEntity.status(HttpStatus.OK).body(taskService.listAllTasksCompleted());
+    }
+
     @Operation(summary = "List Task By Id",description = "Buscando uma tarefa por id", responses = {
             @ApiResponse(responseCode = "200", description = "Tarefa encontrada com sucesso"),
             @ApiResponse(responseCode = "404", description = "Não foi encontrada nenhuma tarefa com esse id")

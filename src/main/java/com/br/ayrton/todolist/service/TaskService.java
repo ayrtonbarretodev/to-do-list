@@ -22,6 +22,10 @@ public class TaskService {
         return taskRepository.findAll();
     }
 
+    public List<Task> listAllTasksCompleted(){
+        return taskRepository.findByStatusTask_Concluida();
+    }
+
     public ResponseEntity<Task> findTaskById(Long id){
         return taskRepository.findById(id)
                 .map(task -> ResponseEntity.ok().body(task))
