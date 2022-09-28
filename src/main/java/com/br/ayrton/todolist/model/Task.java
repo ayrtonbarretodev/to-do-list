@@ -1,5 +1,6 @@
 package com.br.ayrton.todolist.model;
 
+import com.br.ayrton.todolist.model.enums.StatusTask;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
@@ -34,4 +35,8 @@ public class Task {
     @UpdateTimestamp
     @Column(name = "updated_at")
     private LocalDateTime updatedAt;
+
+    @Column(nullable = false)
+    @Enumerated(EnumType.STRING)
+    private StatusTask statusTask;
 }
