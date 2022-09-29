@@ -31,7 +31,7 @@ public class Task {
 
     @CreationTimestamp
     @Column(name = "created_at",updatable = false, nullable = false)
-    private LocalDateTime createdAt;
+    private LocalDate createdAt;
 
     @UpdateTimestamp
     @Column(name = "updated_at")
