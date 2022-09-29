@@ -10,6 +10,10 @@ import java.util.List;
 @Repository
 public interface TaskRepository extends JpaRepository<Task,Long> {
 
-//    @Query("select t.statusTask from Task t where t.statusTask= 'CONCLUIDA' ")
-//    List<Task> findByStatusTaskConcluida();
+    @Query("select t from Task t where t.status= 'CONCLUIDA' ")
+    List<Task> findByStatusTaskCompleted();
+    @Query("select t from Task t where t.status= 'ANDAMENTO' ")
+    List<Task> findByStatusTaskInProgress();
+    @Query("select t from Task t where t.status= 'NAOINICIADA' ")
+    List<Task> findByStatusTaskNotStarted();
 }

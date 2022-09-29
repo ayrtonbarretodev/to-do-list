@@ -4,7 +4,7 @@ import lombok.Getter;
 
 @Getter
 public enum StatusTask {
-    NAOINICIADA("Não Iniciada"),ANDAMENTO("Em Andamento"),CONCLUIDA ("Concluaida");
+    NAOINICIADA("Não Iniciada"),ANDAMENTO("Em Andamento"),CONCLUIDA ("Concluida");
 
     private String descricao;
 

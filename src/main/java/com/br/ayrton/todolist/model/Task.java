@@ -8,6 +8,7 @@ import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
 import javax.persistence.*;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 @Entity
@@ -26,17 +27,17 @@ public class Task {
     private String description;
 
     @Column(nullable = false)
-    private LocalDateTime deadLine;
+    private LocalDate deadLine;
 
     @CreationTimestamp
-    @Column(name = "created_at", nullable = false,updatable = false)
+    @Column(name = "created_at",updatable = false, nullable = false)
     private LocalDateTime createdAt;
 
     @UpdateTimestamp
     @Column(name = "updated_at")
     private LocalDateTime updatedAt;
 
-//    @Column(nullable = false)
-//    @Enumerated(EnumType.STRING)
-//    private StatusTask status;
+    @Column(nullable = false)
+    @Enumerated(EnumType.STRING)
+    private StatusTask status;
 }

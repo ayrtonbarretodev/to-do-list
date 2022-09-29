@@ -44,16 +44,38 @@ public class TaskController {
         return ResponseEntity.status(HttpStatus.OK).body(taskService.listAllTasks());
     }
 
-//    @Operation(summary = "List Task Completed",description = "Listando todas as tarefas completadas",responses = {
-//            @ApiResponse(responseCode = "200", description = "Tarefas completas listadas com sucesso"),
-//            @ApiResponse(responseCode = "500", description = "Houve um erro ao listar as tarefas completadas")
-//    })
+    @Operation(summary = "List Task Completed",description = "Listando todas as tarefas completadas",responses = {
+            @ApiResponse(responseCode = "200", description = "Tarefas completas listadas com sucesso"),
+            @ApiResponse(responseCode = "500", description = "Houve um erro ao listar as tarefas completadas")
+    })
 
-//    @GetMapping("/tasks/completed")
-//    public ResponseEntity<List<Task>> getAllTasksCompleted(){
-//        log.info("Listando todas as tarefas conclídas");
-//        return ResponseEntity.status(HttpStatus.OK).body(taskService.listAllTasksCompleted());
-//    }
+    @GetMapping("/tasks/completed")
+    public ResponseEntity<List<Task>> getAllTasksCompleted(){
+        log.info("Listando todas as tarefas concluídas");
+        return ResponseEntity.status(HttpStatus.OK).body(taskService.listAllTasksCompleted());
+    }
+
+    @Operation(summary = "List Task In Progess",description = "Listando todas as tarefas em andamento",responses = {
+            @ApiResponse(responseCode = "200", description = "Tarefas em andamento listadas com sucesso"),
+            @ApiResponse(responseCode = "500", description = "Houve um erro ao listar as tarefas em andamento")
+    })
+
+    @GetMapping("/tasks/progress")
+    public ResponseEntity<List<Task>> getAllTasksInProgess(){
+        log.info("Listando todas as tarefas em andamento");
+        return ResponseEntity.status(HttpStatus.OK).body(taskService.listAllTasksInProgress());
+    }
+
+    @Operation(summary = "List Task Not Started",description = "Listando todas as tarefas não iniciadas",responses = {
+            @ApiResponse(responseCode = "200", description = "Tarefas não iniciadas listadas com sucesso"),
+            @ApiResponse(responseCode = "500", description = "Houve um erro ao listar as tarefas não iniciadas")
+    })
+
+    @GetMapping("/tasks/notstarted")
+    public ResponseEntity<List<Task>> getAllTasksNotStarted(){
+        log.info("Listando todas as tarefas não iniciadas");
+        return ResponseEntity.status(HttpStatus.OK).body(taskService.listAllTasksNotStarted());
+    }
 
     @Operation(summary = "List Task By Id",description = "Buscando uma tarefa por id", responses = {
             @ApiResponse(responseCode = "200", description = "Tarefa encontrada com sucesso"),
