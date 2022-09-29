@@ -1,0 +1,10 @@
+INSERT INTO TASKS(dead_line,description,status,title) VALUES('2022-09-29','Duas vezes na semana','CONCLUIDA','Correr');
+INSERT INTO TASKS(dead_line,description,status,title) VALUES('2022-10-04','Organizar itens para levar','CONCLUIDA','Viajar');
+INSERT INTO TASKS(dead_line,description,status,title) VALUES('2022-11-08','Organizar lista de compras','CONCLUIDA','Fazer Compras');
+INSERT INTO TASKS(dead_line,description,status,title) VALUES('2022-12-16','Final de Semana','CONCLUIDA','Descansar');
+INSERT INTO TASKS(dead_line,description,status,title) VALUES('2022-09-30','Diariamente','ANDAMENTO','Estudar');
+INSERT INTO TASKS(dead_line,description,status,title) VALUES('2022-09-30','Projeto To Do List','ANDAMENTO','Resolver BUG');
+INSERT INTO TASKS(dead_line,description,status,title) VALUES('2022-09-30','Projeto To Do List','ANDAMENTO','Fazer Deploy');
+INSERT INTO TASKS(dead_line,description,status,title) VALUES('2022-09-27','Primeiro jogo do Brasil','NAOINICIADA','Assistir');
+INSERT INTO TASKS(dead_line,description,status,title) VALUES('2022-09-27','Comprar camisa do Brasil','NAOINICIADA','Copa do Mundo');
+INSERT INTO TASKS(dead_line,description,status,title) VALUES('2022-09-27','Realizar download do E-titulo','NAOINICIADA','Eleição');
